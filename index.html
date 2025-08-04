@@ -125,6 +125,89 @@
       color: var(--text);
       font-size: 1.5rem;
     }
+
+    .projects-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  display: flex;
+  background: var(--glass);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  height: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info .project-date {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-left: 1rem;
+}
+
+.project-info p {
+  margin-bottom: 1rem;
+}
+
+.project-info ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-info li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: var(--card);
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-view:hover {
+  background-color: var(--card);
+  color: #fff;
+}
+
+.hero {
+  background-color: #484b6a; /* RAL Design 290 30 15 approximation */
+}
+
+#skills {
+  background-color: #2e344e;
+  padding-bottom: 3rem; /* for extra spacing at bottom */
+}
+
+
   </style>
 </head>
 <body>
@@ -180,20 +263,42 @@
 
 
     <section id="projects">
-    <h2 class="section-title">My Projects</h2>
-    <div class="skills"> <!-- Using same grid layout for consistency -->
-      <div class="skill-card" style="padding: 1.5rem;">
-        <img src="1.png" alt="QTripStatic" style="width: 100%; border-radius: 0.5rem; margin-bottom: 1rem;" />
-        <h3 style="margin-bottom: 0.5rem;">QTripStatic</h3>
-        <p style="font-size: 0.9rem; text-align: center; margin-bottom: 1rem;">
-          A static travel website with region filters, adventure listings, and detail pages using HTML & Bootstrap.
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+    
+    <div class="project-card">
+      <img src="./assets/css/E-Commerce.jpg" alt="QTripStatic Preview" class="project-img" />
+      <div class="project-info">
+        <h3>QTripStatic <span class="project-date">Jan 2024</span></h3>
+        <p>
+          QTripStatic is a travel website built using HTML and Bootstrap. Features include a landing page, adventure list, and adventure detail pages.
         </p>
-        <a href="qtrip.html" style="background: white; color: #5f2eea; padding: 0.5rem 1rem; border-radius: 5px; font-weight: bold; text-decoration: none;">
-          View Details
-        </a>
+        <ul>
+          <li>Created pages from wireframes using HTML/CSS</li>
+          <li>Used Bootstrap for responsive layout</li>
+          <li>Deployed to Netlify</li>
+        </ul>
+        <a href="qtripstatic.html" class="btn-view">View Project Details</a>
       </div>
     </div>
-  </section>
+
+    <div class="project-card">
+      <img src="./assets/css/E-Commerce.jpg"  alt="QTripDynamic Preview" class="project-img" />
+      <div class="project-info">
+        <h3>QTripDynamic <span class="project-date">Feb 2024</span></h3>
+        <p>
+          QTripDynamic is the dynamic version using JavaScript to manage filters, storage, and page updates.
+        </p>
+        <ul>
+          <li>Multi-select filters and carousels</li>
+          <li>Used localStorage for persistence</li>
+        </ul>
+        <a href="qtripdynamic.html" class="btn-view">View Project Details</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
   <section class="socials" id="socials">
